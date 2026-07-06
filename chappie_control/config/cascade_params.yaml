@@ -1,0 +1,36 @@
+chappie_balance:
+  ros__parameters:
+    # PID equilibrio
+    kp_tilt: 0.1550
+    ki_tilt: 0.2100
+    kd_tilt: 0.0190
+    max_i_sum_tilt: 50.0
+
+    # PI Velocidad
+    kp_vel: 3.2
+    ki_vel: 1.0
+    max_i_sum_vel: 10.0
+    max_pitch_offset_deg: 5.0   # clamp on velocity loop output
+
+    # PI Horizontal
+    kp_yaw: 0.0250
+    ki_yaw: 0.12
+    max_i_sum_yaw: 50.0
+    max_steering_torque: 0.8
+
+    #Punto de Equilibrio 
+    target_pitch_deg: -9.31
+
+
+    max_torque: 3.0
+    max_angle_deg: 30.0
+    
+    #Es en metros por segundo
+    max_target_velocity: 1.0    
+    cmd_vel_timeout_sec: 1.0
+
+    balance_rate_hz: 200.0
+    publish_rate_hz: 50.0
+
+
+    imu_calibration_path: "imu_calibration.json"
